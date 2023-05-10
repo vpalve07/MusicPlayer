@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import './MusicPlayer.css';
+import baarishein from '../Components/songs/baarishein.mp3';
+import gunday from '../Components/songs/gunday.mp3';
+import imagination from '../Components/songs/imagination.mp3';
+import GangstasParadise from '../Components/songs/GangstasParadise.mp3';
+import SachKehRahaHai from '../Components/songs/SachKehRahaHai.mp3';
 
 function MusicPlayer() {
   const [currentTrack, setCurrentTrack] = useState(0);
@@ -8,19 +13,29 @@ function MusicPlayer() {
 
   const tracks = [
     {
-      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
-      artist: 'Jassu',
-      title: 'Song 1'
-    },
-    {
-      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-      artist: 'Tushar',
-      title: 'Song 2'
-    },
-    {
-      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+      url: require('../Components/songs/baarishein.mp3'),
       artist: 'Ruks',
-      title: 'Song 3'
+      title: 'Baarishein'
+    },
+    {
+      url: require('../Components/songs/gunday.mp3'),
+      artist: 'Jassu',
+      title: 'Gunday'
+    },
+    {
+      url: require('../Components/songs/imagination.mp3'),
+      artist: 'Tushar',
+      title: 'Imagination'
+    },
+    {
+      url: require('../Components/songs/GangstasParadise.mp3'),
+      artist: 'Vinayak',
+      title: "Gangsta's Paradise"
+    },
+    {
+      url: require('../Components/songs/SachKehRahaHai.mp3'),
+      artist: 'BrokenOne',
+      title: 'Sach Keh Raha Hai'
     },
   ];  
 
@@ -58,4 +73,5 @@ function MusicPlayer() {
     </div>
   );
 }
+
 export default MusicPlayer;
